@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div class="bg-dark">{{ input }}</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("+")">+</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("-")">-</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("x")">x</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("÷")">÷</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("7")">7</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("8")">8</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("9")">+9</button>
+    </div>
+    <div class="col-3 row-4">
+      <button type="button" class="btn btn-primary" (click)="calculateResult()">=</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("4")">4</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("5")">5</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("6")">6</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("1")">1</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("2")">2</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("3")">3</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered("0")">0</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="valueEntered(".")">.</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-danger" (click)="clearInput()">AC</button>
+    </div>
+  </div>
+</div>
