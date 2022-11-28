@@ -7,28 +7,49 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculator';
-  input!: string;
+  input: any = '';
+
   valueEntered(input: string) {
     this.input += input;
   }
+
   clearInput() {
     this.input = '';
   }
-  calculateResult() {
-    const inputValue = this.input.split(' ');
-    if(inputValue.length>3){
-      return;
-    }
-    switch(inputValue[1]){
-      case '+': this.input=inputValue[0]+inputValue[2];
-      break;
-      case '-': this.input=inputValue[0]+inputValue[2];
-      break;
-      case 'x': this.input=inputValue[0]+inputValue[2];
-      break;
-      case '+': this.input=inputValue[0]+inputValue[2];
-      break;
 
+  calculateResult() {
+    let separator;
+    if (
+      this.input.includes('+') ||
+      this.input.includes('-') ||
+      this.input.includes('x') ||
+      this.input.includes('÷')
+    ) {
+      if (this.input.indexOf('+') >= 0) {
+        separator = '+';
+      } else if (this.input.indexOf('-') >= 0) {
+        separator = '-';
+      } else if (this.input.indexOf('x') >= 0) {
+        separator = 'x';
+      } else {
+        separator = '÷';
+      }
+
+      const inputValue = this.input.split(separator);
+      switch (separator) {
+        case '+':
+          this.input = String(+inputValue[0] + +inputValue[1]);
+          break;
+        case '-':
+          this.input = String(+inputValue[0] - +inputValue[1]);
+          break;
+        case 'x':
+          this.input = String(+inputValue[0] * +inputValue[1]);
+          break;
+        case '÷':
+          this.input = String(+inputValue[0] / +inputValue[1]);
+          break;
+      }
     }
   }
 }

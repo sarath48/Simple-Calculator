@@ -1,0 +1,13 @@
+.btn {
+  background-color: white;
+  color: black;
+  padding: 10px 50px;
+  border: 2px grey solid;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
